@@ -67,7 +67,7 @@ There are no spaces or any other characters in the output other than those menti
 # Examples
 The following examples are the result of running the program compiled with the command:
 ```
-gcc @options -DPOLA=4 -DWIERSZE=10 -DKOLUMNY=7 -DWYBOR=234 zadanie2.c -o zadanie2
+gcc @options -DPOLA=4 -DWIERSZE=10 -DKOLUMNY=7 -DWYBOR=234 poziomka.c -o poziomka
 ```
 Input data files with sample moves are provided as .in files, and the expected output for each example is provided as .out files.
 
