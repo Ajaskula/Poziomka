@@ -1,5 +1,4 @@
-# Poziomka (Strawberry)
-Introduction
+# Introduction
 Strawberry is a two-player combinatorial game played on a rectangular board divided into rows and columns.
 
 The game is parameterized by three positive integers:
@@ -17,15 +16,13 @@ A player's move consists of placing a block on the board, occupying a connected 
 
 A player who cannot make a move when it is their turn or chooses not to continue the game surrenders. The opponent of a player who surrenders wins, even if they themselves cannot make a move.
 
-Board Evaluation
+# Board Evaluation
 During the game, we may want to determine the current score to find the winner. We call this the board evaluation.
 
 The board evaluation from the perspective of a player is the difference between the number of blocks they could currently place on the board and the number of blocks their opponent could currently place on the board.
 
 For example, on a board with POLA equal to 3, WIERSZE equal to 7, and KOLUMNY equal to 11:
 
-r
-Copy code
   A B C D E F G H I J K|
 a . . . # . . # . . . .|
 b . . . # . . # . . . .|
@@ -37,7 +34,7 @@ g . . # . . . . . . . .|
 -----------------------+
 where the occupied squares are marked with the '#' symbol, and the empty squares are marked with the '.' symbol, the Left player, viewing the board from the left side, can place 6 blocks, and the Right player, viewing the board from the bottom, can place 9 blocks. The evaluation for the Right player is thus 9 - 6 = 3.
 
-Command
+# Command
 Write a program that plays as the Right player in the Strawberry game with the parameters POLA, WIERSZE, and KOLUMNY.
 
 The program starts with an optional right to make the first move, given by Left to Right. After that, the program reads the moves made by the Left player and responds to them as the Right player, writing its moves. Right surrenders when they cannot make any moves. The program ends when one of the players surrenders.
@@ -59,14 +56,14 @@ The subsequent lines of data represent the moves made by the Left player, one mo
 
 A line containing only the '.' character signals that Left has surrendered.
 
-Output Format
+# Output Format
 The program writes the moves made by the Right player, one move per line. When Right surrenders, the program writes a line containing only the '.' character.
 
 A move by the Right player is represented by a lowercase letter followed by a capital letter, indicating the row and column, respectively, where the block is placed.
 
 There are no spaces or any other characters in the output other than those mentioned above.
 
-Examples
+# Examples
 The following examples are the result of running the program compiled with the command:
 
 gcc @options -DPOLA=4 -DWIERSZE=10 -DKOLUMNY=7 -DWYBOR=234 zadanie2.c -o zadanie2
