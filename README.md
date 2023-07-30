@@ -22,7 +22,7 @@ During the game, we may want to determine the current score to find the winner. 
 The board evaluation from the perspective of a player is the difference between the number of blocks they could currently place on the board and the number of blocks their opponent could currently place on the board.
 
 For example, on a board with POLA equal to 3, WIERSZE equal to 7, and KOLUMNY equal to 11:
-
+```
   A B C D E F G H I J K|
 a . . . # . . # . . . .|
 b . . . # . . # . . . .|
@@ -32,6 +32,7 @@ e . . # . . # . . # # #|
 f . . # . . . # # # . .|
 g . . # . . . . . . . .|
 -----------------------+
+```
 where the occupied squares are marked with the '#' symbol, and the empty squares are marked with the '.' symbol, the Left player, viewing the board from the left side, can place 6 blocks, and the Right player, viewing the board from the bottom, can place 9 blocks. The evaluation for the Right player is thus 9 - 6 = 3.
 
 # Command
@@ -65,8 +66,9 @@ There are no spaces or any other characters in the output other than those menti
 
 # Examples
 The following examples are the result of running the program compiled with the command:
-
+```
 gcc @options -DPOLA=4 -DWIERSZE=10 -DKOLUMNY=7 -DWYBOR=234 zadanie2.c -o zadanie2
+```
 Input data files with sample moves are provided as .in files, and the expected output for each example is provided as .out files.
 
 For the input data in the file przyklad1.in, the correct output is in przyklad1.out.
